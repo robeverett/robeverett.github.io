@@ -3618,13 +3618,13 @@ input, select, textarea {
 		background: rgba(255, 255, 255, 0.175);
 		height: 4rem;
 		line-height: 4rem;
-		margin: -4rem auto 0 auto;
+		/* margin: -4rem auto 0 auto; */
 		overflow: hidden;
 		padding: 0 2rem 0 0;
 		position: relative;
-		width: calc(100% - 4rem);
-		max-width: 72rem;
-		z-index: 2;
+		/* width: calc(100% - 4rem); */
+		/* max-width: 72rem; */
+		/* z-index: 2; */
 	}
 
 		#nav ul.divided li {
