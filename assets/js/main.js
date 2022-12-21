@@ -247,7 +247,23 @@
 			});
 		}
 
-	const dt = new Date().getFullYear();   // .toLocaleDateString("en-GB");
-	$('#date-time').html(dt);
+	const currentYear = new Date().getFullYear();   // .toLocaleDateString("en-GB");
+	$('#date-time').html(currentYear);
 
+	window.addEventListener('load', (ev) => {
+
+		var page = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+		page = page.substring(0, page.indexOf('.'));
+
+		switch (page) {
+			case 'index':
+				$('#nav ul.links li:nth-of-type(1)').addClass('active');
+				break;
+			case 'about':
+				$('#nav ul.links li:nth-of-type(2)').addClass('active');
+				break;
+		}
+	});
+
+	
 })(jQuery);
