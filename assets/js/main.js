@@ -248,7 +248,7 @@
 		}
 
 	const currentYear = new Date().getFullYear();   // .toLocaleDateString("en-GB");
-	$('#date-time').html(currentYear);
+	$('#current-year').html(currentYear);
 
 		if (window.location.href.includes("qualifications")){
 
@@ -270,19 +270,42 @@
 			});
 		}
 
-	window.addEventListener('load', (ev) => {
+		$navMenu = $(
+			'<nav id="nav">' +
+        		'<ul class="links">' +
+          			'<li data-page="index">' +
+            			'<a href="index.html">Employment</a>' +
+          			'</li>' +
+          			'<li data-page="about">' +
+            			'<a href="about.html">About</a>' +
+          			'</li>' +
+          			'<li data-page="qualifications">' +
+            			'<a href="qualifications.html">Qualifications</a>' +
+          			'</li>' +
+          			'<li data-page="projects">' +
+            			'<a href="projects.html">Projects</a>' +
+          			'</li>' +
+        		'</ul>' +
+				'<ul class="icons">' +
+					'<li>' +
+					'<a href="https://www.linkedin.com/in/rob-everitt-989726269/" class="icon brands fa-linkedin">' +
+					'<span class="label">LinkedIn</span></a>' +
+					'</li>' +
+					'<li>' +
+						'<a href="https://github.com/robeverett" class="icon brands fa-github">' +
+						'<span class="label">GitHub</span></a>' +
+					'</li>' +
+				'</ul>' +
+      		'</nav>'
+		).insertAfter('header#header')
+
+	window.addEventListener('load', () => {
 
 		var page = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
 		page = page.substring(0, page.indexOf('.'));
 
-		switch (page) {
-			case 'index':
-				$('#nav ul.links li:nth-of-type(1)').addClass('active');
-				break;
-			case 'about':
-				$('#nav ul.links li:nth-of-type(2)').addClass('active');
-				break;
-		}
+		// Find the navigation item with the matching data-page attribute and add the active class
+		$('[data-page="' + page + '"]').addClass('active');
 	});
 
 })(jQuery);
