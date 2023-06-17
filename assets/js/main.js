@@ -156,7 +156,7 @@
 				'</ul>' +
 				'<ul class="icons">' +
 					'<li>' +
-					'<a href="https://www.linkedin.com/in/rob-everett-989726269/" class="icon brands fa-linkedin">' +
+					'<a href="https://www.linkedin.com/in/robert-everett-989726269/" class="icon brands fa-linkedin">' +
 					'<span class="label">LinkedIn</span></a>' +
 					'</li>' +
 					'<li>' +
@@ -165,7 +165,7 @@
 					'</li>' +
 				'</ul>' +
 			  '</nav>'
-		).insertAfter($header);
+		).insertAfter($header); 
 
 		// Panel.
 			$navPanel = $(
@@ -187,7 +187,7 @@
 						'</ul>' +
 						'<ul class="icons">' +
 							'<li>' +
-								'<a href="https://www.linkedin.com/in/rob-everett-989726269/" class="icon brands fa-linkedin">' +
+								'<a href="https://www.linkedin.com/in/robert-everett-989726269/" class="icon brands fa-linkedin">' +
 								'<span class="label">LinkedIn</span></a>' +
 							'</li>' +
 							'<li>' +
