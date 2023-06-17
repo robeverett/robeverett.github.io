@@ -12,7 +12,7 @@
 		$header = $('#header'),
 		$nav = $('#nav'),
 		$main = $('#main'),
-		$navPanelToggle, $navPanel, $navPanelInner;
+		$navPanelToggle, $navPanel, $navMenu, $navPanelInner;
 
 	// Breakpoints.
 		breakpoints({
@@ -137,10 +137,64 @@
 					}
 				});
 
+		// nav content on large screens
+		$navMenu = $(
+			'<nav id="nav">' +
+				'<ul class="links">' +
+					  '<li class="active" data-page="index">' +
+						'<a href="index.html">Employment</a>' +
+					  '</li>' +
+					  '<li data-page="about">' +
+						'<a href="about.html">About</a>' +
+					  '</li>' +
+					  '<li data-page="qualifications">' +
+						'<a href="qualifications.html">Qualifications</a>' +
+					  '</li>' +
+					  '<li data-page="projects">' +
+						'<a href="projects.html">Projects</a>' +
+					  '</li>' +
+				'</ul>' +
+				'<ul class="icons">' +
+					'<li>' +
+					'<a href="https://www.linkedin.com/in/rob-everett-989726269/" class="icon brands fa-linkedin">' +
+					'<span class="label">LinkedIn</span></a>' +
+					'</li>' +
+					'<li>' +
+						'<a href="https://github.com/robeverett" class="icon brands fa-github">' +
+						'<span class="label">GitHub</span></a>' +
+					'</li>' +
+				'</ul>' +
+			  '</nav>'
+		).insertAfter($header);
+
 		// Panel.
 			$navPanel = $(
 				'<div id="navPanel">' +
 					'<nav>' +
+						 '<ul class="links">' +
+							'<li class="active" data-page="index">' +
+								'<a href="index.html">Employment</a>' +
+							'</li>' +
+							'<li data-page="about">' +
+								'<a href="about.html">About</a>' +
+							'</li>' +
+							'<li data-page="qualifications">' +
+								'<a href="qualifications.html">Qualifications</a>' +
+							'</li>' +
+							'<li data-page="projects">' +
+								'<a href="projects.html">Projects</a>' +
+							'</li>' +
+						'</ul>' +
+						'<ul class="icons">' +
+							'<li>' +
+								'<a href="https://www.linkedin.com/in/rob-everett-989726269/" class="icon brands fa-linkedin">' +
+								'<span class="label">LinkedIn</span></a>' +
+							'</li>' +
+							'<li>' +
+								'<a href="https://github.com/robeverett" class="icon brands fa-github">' +
+								'<span class="label">GitHub</span></a>' +
+							'</li>' +
+						'</ul>' +
 					'</nav>' +
 					'<a href="#navPanel" class="close"></a>' +
 				'</div>'
@@ -269,35 +323,6 @@
 				slidesContainer.scrollLeft -= slideWidth;				
 			});
 		}
-
-		$navMenu = $(
-			'<nav id="nav">' +
-        		'<ul class="links">' +
-          			'<li data-page="index">' +
-            			'<a href="index.html">Employment</a>' +
-          			'</li>' +
-          			'<li data-page="about">' +
-            			'<a href="about.html">About</a>' +
-          			'</li>' +
-          			'<li data-page="qualifications">' +
-            			'<a href="qualifications.html">Qualifications</a>' +
-          			'</li>' +
-          			'<li data-page="projects">' +
-            			'<a href="projects.html">Projects</a>' +
-          			'</li>' +
-        		'</ul>' +
-				'<ul class="icons">' +
-					'<li>' +
-					'<a href="https://www.linkedin.com/in/rob-everitt-989726269/" class="icon brands fa-linkedin">' +
-					'<span class="label">LinkedIn</span></a>' +
-					'</li>' +
-					'<li>' +
-						'<a href="https://github.com/robeverett" class="icon brands fa-github">' +
-						'<span class="label">GitHub</span></a>' +
-					'</li>' +
-				'</ul>' +
-      		'</nav>'
-		).insertAfter('header#header')
 
 	window.addEventListener('load', () => {
 
