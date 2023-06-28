@@ -137,69 +137,44 @@
 					}
 				});
 
-		// nav content on large screens
-		$navMenu = $(
-			'<nav id="nav">' +
-				'<ul class="links">' +
-					  '<li class="active" data-page="index">' +
-						'<a href="index.html">Employment</a>' +
-					  '</li>' +
-					  '<li data-page="about">' +
-						'<a href="about.html">About</a>' +
-					  '</li>' +
-					  '<li data-page="qualifications">' +
-						'<a href="qualifications.html">Qualifications</a>' +
-					  '</li>' +
-					  '<li data-page="projects">' +
-						'<a href="projects.html">Projects</a>' +
-					  '</li>' +
-				'</ul>' +
-				'<ul class="icons">' +
-					'<li>' +
+		const navContent =
+			'<ul class="links">' +
+				'<li data-page="index">' +
+					'<a href="index.html">Employment</a>' +
+				'</li>' +
+				'<li data-page="about">' +
+					'<a href="about.html">About</a>' +
+				'</li>' +
+				'<li data-page="qualifications">' +
+					'<a href="qualifications.html">Qualifications</a>' +
+				'</li>' +
+				'<li data-page="projects">' +
+					'<a href="projects.html">Projects</a>' +
+				'</li>' +
+			'</ul>' +
+			'<ul class="icons">' +
+				'<li>' +
 					'<a href="https://www.linkedin.com/in/robert-everett-989726269/" class="icon brands fa-linkedin">' +
 					'<span class="label">LinkedIn</span></a>' +
-					'</li>' +
-					'<li>' +
-						'<a href="https://github.com/robeverett" class="icon brands fa-github">' +
-						'<span class="label">GitHub</span></a>' +
-					'</li>' +
-				'</ul>' +
-			  '</nav>'
-		).insertAfter($header); 
+				'</li>' +
+				'<li>' +
+					'<a href="https://github.com/robeverett" class="icon brands fa-github">' +
+					'<span class="label">GitHub</span></a>' +
+				'</li>' +
+			'</ul>';
+
+		// nav content on large screens
+		$navMenu = $('<nav id="nav">' + navContent + '</nav>').insertAfter($header); 
 
 		// Panel.
 			$navPanel = $(
 				'<div id="navPanel">' +
 					'<nav>' +
-						 '<ul class="links">' +
-							'<li class="active" data-page="index">' +
-								'<a href="index.html">Employment</a>' +
-							'</li>' +
-							'<li data-page="about">' +
-								'<a href="about.html">About</a>' +
-							'</li>' +
-							'<li data-page="qualifications">' +
-								'<a href="qualifications.html">Qualifications</a>' +
-							'</li>' +
-							'<li data-page="projects">' +
-								'<a href="projects.html">Projects</a>' +
-							'</li>' +
-						'</ul>' +
-						'<ul class="icons">' +
-							'<li>' +
-								'<a href="https://www.linkedin.com/in/robert-everett-989726269/" class="icon brands fa-linkedin">' +
-								'<span class="label">LinkedIn</span></a>' +
-							'</li>' +
-							'<li>' +
-								'<a href="https://github.com/robeverett" class="icon brands fa-github">' +
-								'<span class="label">GitHub</span></a>' +
-							'</li>' +
-						'</ul>' +
+						navContent +		
 					'</nav>' +
 					'<a href="#navPanel" class="close"></a>' +
 				'</div>'
-			)
-				.appendTo($body)
+			).appendTo($body)
 				.panel({
 					delay: 500,
 					hideOnClick: true,
@@ -300,7 +275,8 @@
 					});
 			});
 		}
-
+	
+	// Use live date in pages
 	const currentYear = new Date().getFullYear();   // .toLocaleDateString("en-GB");
 	$('#current-year').html(currentYear);
 
