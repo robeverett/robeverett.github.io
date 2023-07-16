@@ -4621,7 +4621,7 @@ input, select, textarea {
 			right: 0;
 			text-align: right;
 			top: 0;
-			vertical-align: middle;
+			/* vertical-align: middle; */
 			width: 7rem;
 		}
 
@@ -4762,11 +4762,10 @@ input, select, textarea {
 	/* end slider (image carousel) */
 
 	/* dialog */
+	
 	#codeExamples {
-		
-		overflow-y: auto;
+		margin: auto;
 	}
-
 	#codeExamples ul {	
 		list-style: none;
 	}

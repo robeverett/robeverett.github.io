@@ -19,7 +19,7 @@
           </header>
           <a href="#" class="image main"><img src="images/GenericLaptop.jpg" alt="Generic Laptop" /></a>
           <ul class="actions special">
-            <li><a href="#" class="button large">Code Examples</a></li>
+            <li><a href="#" class="button large">Projects</a></li>
           </ul>
 
           <dialog id="codeExamples">
@@ -45,7 +45,11 @@
             </ul>
             <button type="button">Close</button>
           </dialog>
-
+          <script src="assets/js/dialog-polyfill.js"></script>
+          <script>
+            var dialog = document.querySelector('dialog');
+            dialogPolyfill.registerDialog(dialog);
+          </script>
         </article>
 
         <!-- Posts -->
