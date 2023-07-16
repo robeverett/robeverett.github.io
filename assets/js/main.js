@@ -1,8 +1,3 @@
-/*
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 (function($) {
 
@@ -12,7 +7,7 @@
 		$header = $('#header'),
 		$nav = $('#nav'),
 		$main = $('#main'),
-		$navPanelToggle, $navPanel, $navMenu, $navPanelInner;
+		$navPanelToggle, $navPanel, $navPanelInner;
 
 	// Breakpoints.
 		breakpoints({
@@ -24,6 +19,22 @@
 			xsmall:    ['361px',    '480px'    ],
 			xxsmall:   [null,       '360px'    ]
 		});
+
+	jQuery.fn.extend({showModal: function() {
+        return this.each(function() {
+           if(this.tagName=== "DIALOG"){
+                this.showModal();
+            }
+        });
+ 	}});
+
+	jQuery.fn.extend({close: function() {
+        return this.each(function() {
+           if(this.tagName=== "DIALOG"){
+                this.close();
+            }
+        });
+ 	}});
 
 	/**
 	 * Applies parallax scrolling to an element's background image.
@@ -147,9 +158,6 @@
 				'</li>' +
 				'<li data-page="qualifications">' +
 					'<a href="qualifications.html">Qualifications</a>' +
-				'</li>' +
-				'<li data-page="projects">' +
-					'<a href="projects.html">Projects</a>' +
 				'</li>' +
 			'</ul>' +
 			'<ul class="icons">' +
@@ -280,6 +288,7 @@
 	const currentYear = new Date().getFullYear();   // .toLocaleDateString("en-GB");
 	$('#current-year').html(currentYear);
 
+		// carousel slider functions
 		if (window.location.href.includes("qualifications")){
 
 			const slidesContainer = document.getElementById("slides-container");
@@ -307,6 +316,14 @@
 
 		// Find the navigation item with the matching data-page attribute and add the active class
 		$('[data-page="' + page + '"]').addClass('active');
+	});
+
+	$('li a.large').bind('click', () => {
+		$('#codeExamples').showModal();
+
+		$('dialog button').bind('click', () => {
+			$('#codeExamples').close();	
+		});
 	});
 
 })(jQuery);
