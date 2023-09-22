@@ -2685,7 +2685,7 @@ input, select, textarea {
 		display: flex;
 		cursor: default;
 		list-style: none;
-		margin-left: -1rem;
+		/* margin-left: -1rem; */
 		padding-left: 0;
 	}
 
@@ -4768,6 +4768,22 @@ input, select, textarea {
 	}
 	#codeExamples ul {	
 		list-style: none;
+	}
+
+	@media screen and (max-width: 480px) {
+
+		#codeExamples ul li {
+			padding-left: 0;
+		}
+
+		#codeExamples ul li article {	
+			display: grid;
+			place-items: center;
+		}
+
+		#codeExamples ul li article img {	
+			width: 90%;
+		}
 	}
 
 	
