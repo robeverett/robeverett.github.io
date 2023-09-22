@@ -160,7 +160,7 @@
 					'<a href="qualifications.html">Qualifications</a>' +
 				'</li>' +
 			'</ul>' +
-			'<ul class="icons">' +
+			'<ul class="icons" style="margin: 0;">' +
 				'<li>' +
 					'<a href="https://www.linkedin.com/in/robert-everett-989726269/" class="icon brands fa-linkedin">' +
 					'<span class="label">LinkedIn</span></a>' +
@@ -171,7 +171,7 @@
 				'</li>' +
 			'</ul>';
 
-		// nav content on large screens
+		// for large screens
 		$navMenu = $('<nav id="nav">' + navContent + '</nav>').insertAfter($header); 
 
 		// Panel.
