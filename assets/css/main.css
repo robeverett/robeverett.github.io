@@ -2659,7 +2659,7 @@ input, select, textarea {
 		}
 
 	a.image {
-		overflow: hidden;
+		overflow: auto;
 	}
 
 		a.image img {
