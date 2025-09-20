@@ -9,5 +9,7 @@ Responsive Tools (github.com/ajlkn/responsive-tools)
 To start the static dev server:
 right-click on index.html in EXPLORER, click 'Open with Live Server
 
+Or use localhost:5500 for running dev server in VS Code
+
 This is my primary portfolio and 'About Me' Website, chronicling my software development work history, personal projects and interests - 
 online CV
