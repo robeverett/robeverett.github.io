@@ -286,7 +286,7 @@
 	
 	// Use live date in pages
 	const year = new Date().getFullYear();   // .toLocaleDateString("en-GB");
-	const month = year.toLocaleString('default', { month: 'long' });
+	const month = new Date().toLocaleString('default', { month: 'long' });
 	
 	$('#current-year').html(month + ' ' + year);
 
@@ -330,4 +330,5 @@
 
 
 })(jQuery);
+
 
