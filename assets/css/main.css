@@ -2658,10 +2658,6 @@ input, select, textarea {
 
 		}
 
-	a.image {
-		/* overflow: auto; */
-	}
-
 		a.image img {
 			-moz-transition: -moz-transform 0.2s ease-out;
 			-webkit-transition: -webkit-transform 0.2s ease-out;
