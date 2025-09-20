@@ -286,12 +286,9 @@
 	
 	// Use live date in pages
 	const year = new Date().getFullYear();   // .toLocaleDateString("en-GB");
-	const month = new Date().getMonth();
+	const month = year.toLocaleString('default', { month: 'long' });
 	
 	$('#current-year').html(month + ' ' + year);
-
-	const age = 3
-console.log(`I'm ${age} years old!`)
 
 		// carousel slider functions
 		if (window.location.href.includes("qualifications")){
@@ -333,3 +330,4 @@ console.log(`I'm ${age} years old!`)
 
 
 })(jQuery);
+
