@@ -2206,8 +2206,9 @@ input, select, textarea {
 	button,
 	.button {
 		background-color: transparent;
-		box-shadow: inset 0 0 0 2px #212931;
-		color: #212931 !important;
+		/* box-shadow: inset 0 0 0 2px #212931; */
+		/* color: #212931 !important; */
+		color:#909498;
 	}
 
 		input[type="submit"]:hover,
@@ -3753,7 +3754,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
+		/* background-color: #ffffff; */
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
@@ -3763,7 +3764,8 @@ input, select, textarea {
 
 		#main > * {
 			padding: 4rem 4rem 2rem 4rem ;
-			border-top: solid 2px #eeeeee;
+			/* border-top: solid 2px #eeeeee; */
+			border-top: solid 2px #909498;
 			margin: 0;
 		}
 
@@ -3859,7 +3861,8 @@ input, select, textarea {
 			}
 
 			#main > .posts > article {
-				border-color: #eeeeee;
+				/* border-color: #eeeeee; */
+				border-color: #909498;
 				border-left-width: 2px;
 				border-style: solid;
 				border-top-width: 2px;
