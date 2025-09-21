@@ -178,6 +178,8 @@ input, select, textarea {
 	p {
 		text-align: justify;
 		margin: 0 0 2rem 0;
+		color: #909498;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -2216,7 +2218,7 @@ input, select, textarea {
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			box-shadow: inset 0 0 0 2px #18bfef;
+			/* box-shadow: inset 0 0 0 2px #18bfef; */
 			color: #18bfef !important;
 		}
 
@@ -2904,6 +2906,10 @@ input, select, textarea {
 		text-align: center;
 	}
 
+	section article p {
+		font-size: 0.8rem;
+	}
+
 	header {
 		cursor: default;
 	}
@@ -2953,6 +2959,7 @@ input, select, textarea {
 			header.major > p {
 				margin-top: 0;
 				text-align: center;
+				font-family: "Source Sans Pro", Helvetica, sans-serif;
 			}
 
 			header.major > .date {
@@ -3789,6 +3796,7 @@ input, select, textarea {
 				font-size: 4rem;
 				line-height: 1.1;
 				margin: 0 0 2rem 0;
+				color: #909498;
 			}
 
 			#main > .post.featured {
